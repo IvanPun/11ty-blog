@@ -3,7 +3,16 @@ layout: 'layouts/base.html'
 title: 'Home'
 ---
 
-# Home
+## Please read the following pages
+
+<ul>
+  {%- for page in collections.static -%}
+  <li>
+  <a href="{{ page.data.permalink }}/">{{ page.data.title }}</a>
+  </li>
+  {%- endfor -%}
+</ul>
+
 
 {%- for post in posts -%}
 <div class="post">
